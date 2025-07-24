@@ -3,9 +3,11 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>Анкета клиента нутрициолога</title>
+	<title>Анкета клиента Yulia Voronova</title>
 	<link rel="stylesheet" href="style.css">
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -16,10 +18,10 @@
 		</div>
 
 		<h1>🥬 Ваш путь к здоровью</h1>
-		<h2>Анкета клиента нутрициолога</h2>
 
 		<p class="instructions">
-			Пожалуйста, заполните анкету. После отправки она будет доставлена мне на электронную почту для анализа и разработки плана питания.
+			Пожалуйста, заполните анкету.<br>
+			После отправки она будет доставлена мне на электронную почту <br>для анализа и разработки плана питания.
 		</p>
 
 		<form action="https://api.web3forms.com/submit" method="POST">
@@ -39,12 +41,35 @@
 
 			<section>
 				<h3>🎯 Цели консультации</h3>
-				<label><input type="checkbox" name="Цели[]" value="Снижение веса"> Снижение веса</label>
-				<label><input type="checkbox" name="Цели[]" value="Повышение энергии"> Повышение энергии</label>
-				<label><input type="checkbox" name="Цели[]" value="Улучшение пищевых привычек"> Улучшение пищевых привычек</label>
-				<label><input type="checkbox" name="Цели[]" value="Переход на вегетарианство"> Переход на вегетарианство</label>
-				<label><input type="checkbox" name="Цели[]" value="Улучшение состояния кожи / ЖКТ / иммунитета"> Улучшение состояния кожи / ЖКТ / иммунитета</label>
-				<label>Другое: <input type="text" name="Цели - другое"></label>
+				<label class="custom-checkbox">
+					<input type="checkbox" name="Цели[]" value="Снижение веса">
+					<span class="checkmark"></span>
+					Снижение веса
+				</label>
+
+				<label class="custom-checkbox">
+					<input type="checkbox" name="Цели[]" value="Повышение энергии">
+					<span class="checkmark"></span>
+					Повышение энергии
+				</label>
+				<label class="custom-checkbox">
+					<input type="checkbox" name="Цели[]" value="Улучшение пищевых привычек">
+					<span class="checkmark"></span>
+					Общее улучшение состояния здоровья
+					<span class="checkmark"></span>
+				</label>
+				<label class="custom-checkbox">
+					<input type="checkbox" name="Цели[]" value="Переход на вегетарианство">
+					<span class="checkmark"></span>
+					Переход на вегетарианство
+				</label>
+				<label class="custom-checkbox">
+					<input type="checkbox" name="Цели[]" value="Улучшение состояния кожи, волос, ЖКТ">
+					<span class="checkmark"></span>
+					Улучшение состояния кожи, волос, ЖКТ
+				</label>
+
+				<label>Другое: <input type="text" name="Питание - другое"></label>
 			</section>
 
 			<section>
@@ -53,7 +78,8 @@
 				<label><input type="radio" name="Питание" value="Вегетарианство"> Вегетарианство</label>
 				<label><input type="radio" name="Питание" value="Веганство"> Веганство</label>
 				<label><input type="radio" name="Питание" value="Безглютеновая диета"> Безглютеновая диета</label>
-				<label>Другое: <input type="text" name="Питание - другое"></label>
+				<label>Другое:
+					<input type="text" name="Питание - другое"></label>
 			</section>
 
 			<section>
