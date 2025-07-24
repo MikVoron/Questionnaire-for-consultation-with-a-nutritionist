@@ -56,7 +56,6 @@
 					<input type="checkbox" name="Цели[]" value="Улучшение пищевых привычек">
 					<span class="checkmark"></span>
 					Общее улучшение состояния здоровья
-					<span class="checkmark"></span>
 				</label>
 				<label class="custom-checkbox">
 					<input type="checkbox" name="Цели[]" value="Переход на вегетарианство">
@@ -74,10 +73,29 @@
 
 			<section>
 				<h3>🍽️ Текущая система питания</h3>
-				<label><input type="radio" name="Питание" value="Всёядный рацион"> Всёядный рацион</label>
-				<label><input type="radio" name="Питание" value="Вегетарианство"> Вегетарианство</label>
-				<label><input type="radio" name="Питание" value="Веганство"> Веганство</label>
-				<label><input type="radio" name="Питание" value="Безглютеновая диета"> Безглютеновая диета</label>
+				<label class="custom-radio">
+					<input type="radio" name="Питание" value="Всёядный рацион">
+					<span class="radiomark"></span>
+					Всёядный рацион
+				</label>
+
+				<label class="custom-radio">
+					<input type="radio" name="Питание" value="Вегетарианство">
+					<span class="radiomark"></span>
+					Вегетарианство
+				</label>
+
+				<label class="custom-radio">
+					<input type="radio" name="Питание" value="Веганство">
+					<span class="radiomark"></span>
+					Веганство
+				</label>
+				<label class="custom-radio">
+					<input type="radio" name="Питание" value="Безглютеновая диета">
+					<span class="radiomark"></span>
+					Безглютеновая диета
+				</label>
+
 				<label>Другое:
 					<input type="text" name="Питание - другое"></label>
 			</section>

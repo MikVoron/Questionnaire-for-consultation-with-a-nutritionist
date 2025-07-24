@@ -225,3 +225,57 @@ label {
   display: block;
 }
 
+.custom-radio {
+  position: relative;
+  padding-left: 34px;
+  margin-bottom: 16px;
+  font-family: 'Lora', serif;
+  font-size: 16px;
+  color: #2d6a4f;
+  display: block;
+  cursor: pointer;
+}
+
+.custom-radio input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.custom-radio .radiomark {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 2px solid #74c69d;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+/* При наведении */
+.custom-radio:hover .radiomark {
+  background-color: #eaf4ef;
+}
+
+/* При выборе — показать внутреннюю точку */
+.custom-radio input:checked ~ .radiomark {
+  background-color: #74c69d;
+}
+
+.custom-radio .radiomark::after {
+  content: "";
+  position: absolute;
+  display: none;
+  top: 5px;
+  left: 5px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.custom-radio input:checked ~ .radiomark::after {
+  display: block;
+}
