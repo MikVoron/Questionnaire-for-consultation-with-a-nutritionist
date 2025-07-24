@@ -1,14 +1,14 @@
 body {
- font-family: 'Open Sans', 'Nunito', sans-serif;
-  background-color: #f6fdf8;
-  color: #333;
-  max-width: 700px;
-  margin: 40px auto;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.08);
+  margin: 0;
+  padding: 0;
+  background-image: url("bg1.jpeg"); /* замени на имя твоего фонового файла */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: 'Open Sans', 'Nunito', sans-serif;
+  color: #1b4332;
 }
-
 
 
 .logo-container {
@@ -21,6 +21,12 @@ body {
   height: auto;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 h1, h2, h3 {
@@ -95,6 +101,7 @@ button[type="submit"]:hover {
 
   h1, h2 {
     font-size: 22px;
+
   }
 }
 
@@ -121,4 +128,13 @@ form {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   max-width: 700px;
   margin: auto;
+}
+
+.form-container {
+  background-color: rgba(255, 255, 255, 0.9); /* белый с прозрачностью */
+  padding: 30px;
+  margin: 40px auto;
+  max-width: 720px;
+  border-radius: 16px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
 }
