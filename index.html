@@ -29,17 +29,99 @@
 			<input type="hidden" name="subject" value="Анкета клиента нутрициолога">
 			<input type="hidden" name="redirect" value="http://127.0.0.1:5500/thankyou.html">
 
+			<hr class="svg-divider svg-divider-name">
+
 			<section>
-				<h3>🙋 Ваше имя</h3>
-				<label><input type="text" name="name" required placeholder="Иван Иванов"></label>
+				<h3>🙋 Давайте познокомимся!</h3>
+
+				<label>Имя и фамилия:
+					<input type="text" name="name" required placeholder="Лидия Петрова">
+				</label>
+
+				<label>Возраст:
+					<input type="text" name="age" required placeholder="Например: 34">
+				</label>
+
+				<label>Место жительства:
+					<input type="text" name="location" required placeholder="Город, страна">
+				</label>
+
+				<label>Род занятий:
+					<input type="text" name="occupation" required placeholder="Чем вы занимаетесь?">
+				</label>
+
+				<label>Вес (кг):
+					<input type="text" name="weight" required placeholder="Например: 68. Укажите, пожадуйста также, довольны ли Вы своим весом.">
+				</label>
+
+				<label>Рост (см):
+					<input type="text" name="height" required placeholder="Например: 172">
+				</label>
+
+				<label>Ваш запрос для обращения:
+					<textarea name="client_request" rows="3" placeholder="С какой целью вы обратились? Что вас беспокоит?"></textarea>
+				</label>
 			</section>
 
-			<hr class="svg-divider">
+			<hr class="svg-divider svg-divider-email">
+
+			<section>
+				<h3>💡 Энергия и самочувствие</h3>
+
+				<label for="energy-level">Оцените Ваш уровень энергии:</label>
+				<div style="display: flex; justify-content: space-between; margin: 0.5em 0;">
+					<span>1 🙁 <small>Вообще нет энергии</small></span>
+					<input type="range" id="energy-level" name="Энергия" min="1" max="5" style="flex-grow: 1; margin: 0 1em;">
+					<span>5 😄 <small>Максимальная энергия</small></span>
+				</div>
+
+				<label>Что Вас беспокоит в Вашем питании и привычках?
+					<textarea name="Питание - беспокойство" rows="3" placeholder="Например: нерегулярное питание, много сладкого, мало овощей..."></textarea>
+				</label>
+			</section>
+
+			<hr class="svg-divider svg-divider-email">
+
+			<section>
+				<h3>🍽️ Ваш текущий тип питания</h3>
+
+				<label class="custom-checkbox">
+					<input type="checkbox" name="Тип питания[]" value="Смешанный тип">
+					<span class="checkmark"></span>
+					Смешанный тип
+				</label>
+
+				<label class="custom-checkbox">
+					<input type="checkbox" name="Тип питания[]" value="Преимущественно растительный">
+					<span class="checkmark"></span>
+					Преимущественно растительный
+				</label>
+
+				<label class="custom-checkbox">
+					<input type="checkbox" name="Тип питания[]" value="100% растительный тип">
+					<span class="checkmark"></span>
+					100% растительный тип
+				</label>
+
+				<label class="custom-checkbox">
+					<input type="checkbox" name="Тип питания[]" value="Я — мясоед">
+					<span class="checkmark"></span>
+					Я — мясоед
+				</label>
+
+				<label class="custom-checkbox">
+					<input type="checkbox" name="Тип питания[]" value="Мамкин хищник">
+					<span class="checkmark"></span>
+					Мамкин хищник 😄
+				</label>
+			</section>
 
 			<section>
 				<h3>📧 Ваш e-mail</h3>
 				<label><input type="email" name="email" required placeholder="example@mail.com"></label>
 			</section>
+
+			<hr class="svg-divider">
 
 			<section>
 				<h3>🎯 Цели консультации</h3>
@@ -72,6 +154,8 @@
 
 				<label>Другое: <input type="text" name="Питание - другое"></label>
 			</section>
+
+			<hr class="svg-divider">
 
 			<section>
 				<h3>🍽️ Текущая система питания</h3>
