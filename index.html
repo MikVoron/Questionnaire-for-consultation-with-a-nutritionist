@@ -234,7 +234,7 @@
 			<hr class="svg-divider svg-divider-sleep">
 
 			<section class="custom-checkbox-group">
-				<h3 class="checkbox-title">🩺 5. Что чувствует ваше тело?</h3>
+				<h3 class="checkbox-title">🩺 5. Что чувствует ваше тело сейчас?</h3>
 				<p class="checkbox-note">Отметьте ниже, если симптом был в течение последних 3 месяцев</p>
 
 				<label class="custom-checkbox">
@@ -311,7 +311,7 @@
 				</label>
 
 				<label class="custom-radio radio-title">
-					Регулярный ли у Вас стул? (1 или более раз в день, без боли и неприятных ощущений)
+					Регулярный ли у Вас стул? (один или более раз в день, без боли и неприятных ощущений)
 				</label>
 				<label class="custom-radio">
 					<input type="radio" name="stool" value="yes">
@@ -376,6 +376,97 @@
 					Нет
 				</label>
 
+			</section>
+
+			<hr class="svg-divider svg-divider-sleep">
+
+			<section class="custom-checkbox-group">
+				<h3 class="checkbox-title">🫀 6. Медицинская информация</h3>
+				<p class="checkbox-note">Пожалуйста, отметьте, если у Вас наблюдаются указанные состояния или имеются соответствующие диагнозы</p>
+
+				<!-- Известные заболевания -->
+				<label class="custom-checkbox">
+					<input type="checkbox" name="medical-condition" value="diabetes">
+					<span class="checkmark"></span>
+					Сахарный диабет
+				</label>
+				<label class="custom-checkbox">
+					<input type="checkbox" name="medical-condition" value="cholesterol">
+					<span class="checkmark"></span>
+					Повышенный холестерин
+				</label>
+				<label class="custom-checkbox">
+					<input type="checkbox" name="medical-condition" value="hypertension">
+					<span class="checkmark"></span>
+					Повышенное давление (гипертония)
+				</label>
+				<label class="custom-checkbox">
+					<input type="checkbox" name="medical-condition" value="atherosclerosis">
+					<span class="checkmark"></span>
+					Атеросклероз
+				</label>
+
+				<!-- Перенесенные сердечно-сосудистые события -->
+				<label class="custom-checkbox">
+					<input type="checkbox" name="heart-event" value="infarct">
+					<span class="checkmark"></span>
+					Инфаркт
+				</label>
+				<label class="custom-checkbox">
+					<input type="checkbox" name="heart-event" value="stroke">
+					<span class="checkmark"></span>
+					Инсульт
+				</label>
+				<label class="custom-checkbox">
+					<input type="checkbox" name="heart-event" value="attack">
+					<span class="checkmark"></span>
+					Сердечный приступ
+				</label>
+
+				<!-- Головные боли -->
+				<label class="custom-radio radio-title">Бывают ли у Вас регулярные головные боли?</label>
+				<label class="custom-radio">
+					<input type="radio" name="headache" value="yes">
+					<span class="checkmark"></span>
+					Да
+				</label>
+				<label class="custom-radio">
+					<input type="radio" name="headache" value="no">
+					<span class="checkmark"></span>
+					Нет
+				</label>
+
+				<!-- Причина головных болей -->
+				<label class="custom-textarea">
+					<span class="textarea-title">Если да, есть ли диагноз и известная причина?</span>
+					<textarea name="headache-diagnosis" placeholder="Пожалуйста, опишите причину или диагноз, если он Вам известен"></textarea>
+				</label>
+
+				<!-- Иммунитет -->
+				<label class="custom-radio radio-title">Оцените свой иммунитет</label>
+				<label class="custom-radio">
+					<input type="radio" name="immunity" value="strong">
+					<span class="checkmark"></span>
+					У меня крепкий иммунитет
+				</label>
+				<label class="custom-radio">
+					<input type="radio" name="immunity" value="weak">
+					<span class="checkmark"></span>
+					Частые простуды, ослабленный иммунитет
+				</label>
+
+				<!-- Тонзиллит -->
+				<label class="custom-radio radio-title">Есть ли у Вас хронический тонзиллит?</label>
+				<label class="custom-radio">
+					<input type="radio" name="tonsillitis" value="yes">
+					<span class="checkmark"></span>
+					Да
+				</label>
+				<label class="custom-radio">
+					<input type="radio" name="tonsillitis" value="no">
+					<span class="checkmark"></span>
+					Нет
+				</label>
 			</section>
 
 			<section>
