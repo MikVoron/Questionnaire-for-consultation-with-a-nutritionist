@@ -6,7 +6,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  font-family: 'Open Sans', 'Nunito', sans-serif;
+  font-family: 'Lora', 'Nunito', sans-serif;
   color: #1b4332;
   /* background-color:#eaf4ef; */
 }
@@ -90,7 +90,7 @@ label {
 }
 
 
-.label-title {
+.label-title, .radio-title {
   display: block;               /* переносит текст на отдельную строку */
   font-weight: bold;            /* жирное начертание */
   margin-bottom: 20px;           /* отступ снизу перед полем ввода */
@@ -442,3 +442,13 @@ textarea:hover {
 .custom-radio input[type="radio"]:checked ~ .checkmark::after {
     display: block;
 }
+
+.textarea-title {
+  display: block;
+  font-family: 'Lora', serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: #2d6a4f;
+  margin-bottom: 8px; /* вот он — аккуратный отступ вниз */
+}
+
