@@ -32,10 +32,10 @@
 			<hr class="svg-divider svg-divider-name">
 
 			<section>
-				<h3>🙋 1. Давайте познокомимся!</h3>
+				<h3>🙋 1. Давайте познакомимся!</h3>
 
 				<label>
-					<span class="label-title">1.1 Имя и фамилия:</span>
+					<span class="label-title">1.1 Ваши имя и фамилия:</span>
 					<input type="text" name="name" required placeholder="Лидия Петрова">
 				</label>
 
@@ -190,7 +190,44 @@
 				</label>
 			</section>
 
-			<hr class="svg-divider">
+			<hr class="svg-divider svg-divider-sleep">
+
+			<section>
+				<h3>🛌 4. Ваш сон и уровень стресса</h3>
+
+				<label>
+					<span class="label-title">4.1 Время отхода ко сну и время пробуждения:</span>
+					<input type="text" name="sleep_times" placeholder="Например: ложусь в 23:00, просыпаюсь в 07:30">
+				</label>
+
+				<label>
+					<span class="label-title">4.2 Легко ли Вы засыпаете?</span>
+					<input type="text" name="fall_asleep" placeholder="Например: засыпаю быстро / долго ворочаюсь.../ долго читаю перед сном, чтобы уснуть...">
+				</label>
+
+				<label>
+					<span class="label-title">4.3 Каким Вы просыпаетесь большую часть времени?</span>
+					<label class="custom-radio">
+						<input type="radio" name="wake_feeling" value="Просыпаюсь усталым">
+						<span class="checkmark"></span>
+						Просыпаюсь усталым 😫
+					</label>
+					<label class="custom-radio">
+						<input type="radio" name="wake_feeling" value="Просыпаюсь полным энергии">
+						<span class="checkmark"></span>
+						Просыпаюсь полным энергии ⚡
+					</label>
+				</label>
+
+				<label>
+					<span class="label-title">4.4 Уровень ежедневного стресса в Вашей жизни на данный момент:</span>
+					<div style="display: flex; justify-content: space-between; margin: 0.5em 0;">
+						<span>1 😌 <small>Максимально расслаблен</small></span>
+						<input type="range" name="stress_level" min="1" max="5" style="flex-grow: 1; margin: 0 1em;">
+						<span>5 😣 <small>Постоянный стресс</small></span>
+					</div>
+				</label>
+			</section>
 
 			<section>
 				<h3>📝 Дополнительные комментарии</h3>

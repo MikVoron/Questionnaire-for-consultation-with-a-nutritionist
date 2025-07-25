@@ -57,13 +57,18 @@ button {
 h1, h2 {
   font-size: 28px;
   text-align: center;
-  margin-bottom: 20px;
+
 }
 
 h1, h2, h3 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Lora', serif;
   color: #2d6a4f;
   margin-bottom: 20px;
+}
+
+h3 {
+	  font-size: 20px;
+
 }
 
 .instructions {
@@ -75,14 +80,15 @@ h1, h2, h3 {
 }
 
 section {
-  margin-bottom: 28px;
+    margin-bottom: 3em;
 }
 
 label {
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 1.5em; /* Было возможно меньше, увеличиваем */
   cursor: pointer;
 }
+
 
 .label-title {
   display: block;               /* переносит текст на отдельную строку */
@@ -384,3 +390,55 @@ textarea:hover {
   border-color: #40916c;
 }
 
+/* Стили для radio-кнопок, в стиле чекбоксов */
+.custom-radio {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+    cursor: pointer;
+    position: relative;
+    padding-left: 28px; /* отступ для кружочка */
+    font-size: 1rem;
+}
+
+/* Скрываем стандартный radio */
+.custom-radio input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Кружок */
+.custom-radio .checkmark {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 18px;
+    width: 18px;
+    background-color: #eee;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+}
+
+/* Когда выбрано — внутренний кружок */
+.custom-radio input[type="radio"]:checked ~ .checkmark {
+    background-color: #52B788;
+    border-color: #52B788;
+}
+
+.custom-radio .checkmark::after {
+    content: "";
+    position: absolute;
+    display: none;
+    top: 4px;
+    left: 4px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+
+.custom-radio input[type="radio"]:checked ~ .checkmark::after {
+    display: block;
+}
