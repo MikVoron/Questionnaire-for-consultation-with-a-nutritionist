@@ -32,50 +32,50 @@
 			<hr class="svg-divider svg-divider-name">
 
 			<section>
-				<h3>🙋 Давайте познокомимся!</h3>
+				<h3>🙋 1. Давайте познокомимся!</h3>
 
 				<label>
-					<span class="label-title">Имя и фамилия:</span>
+					<span class="label-title">1.1 Имя и фамилия:</span>
 					<input type="text" name="name" required placeholder="Лидия Петрова">
 				</label>
 
 				<label>
-					<span class="label-title">Возраст:</span>
+					<span class="label-title">1.2. Возраст:</span>
 					<input type="text" name="age" required placeholder="Например: 34">
 				</label>
 
 				<label>
-					<span class="label-title">Место жительства:</span>
+					<span class="label-title">1.3. Место жительства:</span>
 					<input type="text" name="location" required placeholder="Город, страна">
 				</label>
 
 				<label>
-					<span class="label-title">Ваш e-mail:</span>
+					<span class="label-title">1.4 Ваш e-mail:</span>
 					<input type="email" name="email" required placeholder="example@mail.com">
 				</label>
 
 				<label>
-					<span class="label-title">Род занятий:</span>
+					<span class="label-title">1.5 Род занятий:</span>
 					<input type="text" name="occupation" required placeholder="Чем вы занимаетесь?">
 				</label>
 
 				<label>
-					<span class="label-title">Вес (кг):</span>
+					<span class="label-title">1.6 Вес (кг):</span>
 					<input type="text" name="weight" required placeholder="Например: 68. Укажите, пожалуйста также, довольны ли Вы своим весом.">
 				</label>
 
 				<label>
-					<span class="label-title">Рост (см):</span>
+					<span class="label-title">1.7 Рост (см):</span>
 					<input type="text" name="height" required placeholder="Например: 172">
 				</label>
 
 				<label>
-					<span class="label-title">Ваш запрос для обращения:</span>
+					<span class="label-title">1.8 Ваш запрос для обращения:</span>
 					<textarea name="client_request" rows="3" placeholder="С какой целью вы обратились? Что вас беспокоит?"></textarea>
 				</label>
 
 				<label class="custom-checkbox-group">
-					<span class="checkbox-title">Над чем Вы готовы поработать для достижения своих целей?</span>
+					<span class="checkbox-title">1.9 Над чем Вы готовы поработать для достижения своих целей?</span>
 
 					<label class="custom-checkbox">
 						<input type="checkbox" name="Готовность к изменениям[]" value="Повышение физической активности">
@@ -101,7 +101,7 @@
 			<hr class="svg-divider svg-divider-email">
 
 			<section>
-				<h3>💡 Энергия и самочувствие</h3>
+				<h3>💡 2. Ваша энергия и самочувствие</h3>
 
 				<label for="energy-level">Оцените Ваш уровень энергии:</label>
 				<div style="display: flex; justify-content: space-between; margin: 0.5em 0;">
@@ -148,6 +148,52 @@
 					<input type="checkbox" name="Тип питания[]" value="Мамкин хищник">
 					<span class="checkmark"></span>
 					Мамкин хищник 😄
+				</label>
+
+				<hr class="svg-divider svg-divider-email">
+
+				<div class="checkbox-group soft-style">
+					<label class="label-title">Употребляете ли Вы животные продукты?</label>
+
+					<label class="custom-checkbox">
+						<input type="checkbox" name="animal[]" value="Молочные">
+						<span class="checkmark"></span>
+						Молочные
+					</label>
+					<input type="text" name="freq_milk" placeholder="Как часто в неделю?" class="light-input">
+
+					<label class="custom-checkbox">
+						<input type="checkbox" name="animal[]" value="Мясо">
+						<span class="checkmark"></span>
+						Мясо
+					</label>
+					<input type="text" name="freq_meat" placeholder="Как часто в неделю?" class="light-input">
+
+					<label class="custom-checkbox">
+						<input type="checkbox" name="animal[]" value="Рыба">
+						<span class="checkmark"></span>
+						Рыба
+					</label>
+					<input type="text" name="freq_fish" placeholder="Как часто в неделю?" class="light-input">
+
+					<label class="custom-checkbox">
+						<input type="checkbox" name="animal[]" value="Яйца">
+						<span class="checkmark"></span>
+						Яйца
+					</label>
+					<input type="text" name="freq_eggs" placeholder="Как часто в неделю?" class="light-input">
+				</div>
+
+				<hr class="svg-divider svg-divider-email">
+
+				<label>
+					<span class="label-title">Ваше отношение к сладостям?</span>
+					<textarea name="Сладости" rows="2" placeholder="Как часто Вы едите их? Например: шоколад — 3 раза в неделю, по половине плитки."></textarea>
+				</label>
+
+				<label>
+					<span class="label-title">Сколько воды (в литрах) Вы пьете в течение дня?</span>
+					<input type="text" name="Вода" placeholder="Например: 1.5 – 2 литра">
 				</label>
 			</section>
 

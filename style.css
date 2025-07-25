@@ -87,10 +87,19 @@ label {
 .label-title {
   display: block;               /* переносит текст на отдельную строку */
   font-weight: bold;            /* жирное начертание */
-  margin-bottom: 8px;           /* отступ снизу перед полем ввода */
+  margin-bottom: 20px;           /* отступ снизу перед полем ввода */
   font-family: 'Lora', serif;   /* стиль соответствует остальному оформлению */
   font-size: 16px;
   color: #2d6a4f;
+}
+
+.light-input {
+  margin-bottom: 16px; /* регулируй по вкусу */
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  background-color: #f9f9f9;
 }
 
 
