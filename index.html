@@ -46,6 +46,9 @@
 					<input type="text" name="location" required placeholder="Город, страна">
 				</label>
 
+				<label>Ваш e-mail:
+					<input type="email" name="email" required placeholder="example@mail.com"></label>
+
 				<label>Род занятий:
 					<input type="text" name="occupation" required placeholder="Чем вы занимаетесь?">
 				</label>
@@ -61,6 +64,29 @@
 				<label>Ваш запрос для обращения:
 					<textarea name="client_request" rows="3" placeholder="С какой целью вы обратились? Что вас беспокоит?"></textarea>
 				</label>
+
+				<label class="custom-checkbox-group">
+					<span class="checkbox-title">Над чем Вы готовы поработать для достижения своих целей?</span>
+
+					<label class="custom-checkbox">
+						<input type="checkbox" name="Готовность к изменениям[]" value="Повышение физической активности">
+						<span class="checkmark"></span>
+						Повышение физической активности 🏃
+					</label>
+
+					<label class="custom-checkbox">
+						<input type="checkbox" name="Готовность к изменениям[]" value="Изменение питания">
+						<span class="checkmark"></span>
+						Изменение питания 🍽️
+					</label>
+
+					<label class="custom-checkbox">
+						<input type="checkbox" name="Готовность к изменениям[]" value="Формирование здоровых привычек">
+						<span class="checkmark"></span>
+						Пищевые привычки 🔁
+					</label>
+				</label>
+
 			</section>
 
 			<hr class="svg-divider svg-divider-email">
@@ -116,91 +142,7 @@
 				</label>
 			</section>
 
-			<section>
-				<h3>📧 Ваш e-mail</h3>
-				<label><input type="email" name="email" required placeholder="example@mail.com"></label>
-			</section>
-
 			<hr class="svg-divider">
-
-			<section>
-				<h3>🎯 Цели консультации</h3>
-				<label class="custom-checkbox">
-					<input type="checkbox" name="Цели[]" value="Снижение веса">
-					<span class="checkmark"></span>
-					Снижение веса
-				</label>
-
-				<label class="custom-checkbox">
-					<input type="checkbox" name="Цели[]" value="Повышение энергии">
-					<span class="checkmark"></span>
-					Повышение энергии
-				</label>
-				<label class="custom-checkbox">
-					<input type="checkbox" name="Цели[]" value="Улучшение пищевых привычек">
-					<span class="checkmark"></span>
-					Общее улучшение состояния здоровья
-				</label>
-				<label class="custom-checkbox">
-					<input type="checkbox" name="Цели[]" value="Переход на вегетарианство">
-					<span class="checkmark"></span>
-					Переход на вегетарианство
-				</label>
-				<label class="custom-checkbox">
-					<input type="checkbox" name="Цели[]" value="Улучшение состояния кожи, волос, ЖКТ">
-					<span class="checkmark"></span>
-					Улучшение состояния кожи, волос, ЖКТ
-				</label>
-
-				<label>Другое: <input type="text" name="Питание - другое"></label>
-			</section>
-
-			<hr class="svg-divider">
-
-			<section>
-				<h3>🍽️ Текущая система питания</h3>
-				<label class="custom-radio">
-					<input type="radio" name="Питание" value="Всёядный рацион">
-					<span class="radiomark"></span>
-					Всёядный рацион
-				</label>
-
-				<label class="custom-radio">
-					<input type="radio" name="Питание" value="Вегетарианство">
-					<span class="radiomark"></span>
-					Вегетарианство
-				</label>
-
-				<label class="custom-radio">
-					<input type="radio" name="Питание" value="Веганство">
-					<span class="radiomark"></span>
-					Веганство
-				</label>
-				<label class="custom-radio">
-					<input type="radio" name="Питание" value="Безглютеновая диета">
-					<span class="radiomark"></span>
-					Безглютеновая диета
-				</label>
-
-				<label>Другое:
-					<input type="text" name="Питание - другое"></label>
-			</section>
-
-			<section>
-				<h3>🧘 Уровень физической активности</h3>
-				<label><input type="radio" name="Активность" value="Низкий"> Низкий</label>
-				<label><input type="radio" name="Активность" value="Средний"> Средний</label>
-				<label><input type="radio" name="Активность" value="Высокий"> Высокий</label>
-			</section>
-
-			<section>
-				<h3>🥗 Пищевые предпочтения</h3>
-				<label><input type="checkbox" name="Предпочтения[]" value="Люблю сладкое"> Люблю сладкое</label>
-				<label><input type="checkbox" name="Предпочтения[]" value="Часто ем фастфуд"> Часто ем фастфуд</label>
-				<label><input type="checkbox" name="Предпочтения[]" value="Предпочитаю домашнюю еду"> Предпочитаю домашнюю еду</label>
-				<label><input type="checkbox" name="Предпочтения[]" value="Есть непереносимость"> Есть непереносимость</label>
-				<label>Аллергия на: <input type="text" name="Аллергия"></label>
-			</section>
 
 			<section>
 				<h3>📝 Дополнительные комментарии</h3>

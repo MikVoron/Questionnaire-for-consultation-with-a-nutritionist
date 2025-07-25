@@ -207,6 +207,11 @@ label {
   gap: 12px;
 }
 
+.checkbox-title {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
 
 .custom-checkbox input[type="checkbox"] {
   position: absolute;
@@ -359,3 +364,4 @@ input:hover,
 textarea:hover {
   border-color: #40916c;
 }
+
