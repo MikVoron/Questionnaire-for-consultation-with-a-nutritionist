@@ -528,3 +528,18 @@ input[type="range"]::-moz-range-thumb {
   border-radius: 50%;
   cursor: pointer;
 }
+
+.slider-value {
+  margin-top: 8px;
+  font-size: 14px;
+  transition: color 0.3s ease;
+  font-weight: 500;
+}
+
+input[type="range"] {
+  --range-fill: #74c69d;
+  background: linear-gradient(to right, var(--range-fill) 0%, #ccc 0%);
+  height: 8px;
+  border-radius: 5px;
+  appearance: none;
+}
