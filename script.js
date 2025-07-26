@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', () => {
   // Кнопка печати
   const printButton = document.getElementById("print-button");
@@ -108,4 +109,5 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // здесь остаются код для энергии и стресса — ты уже настроил их идеально!
+
 });

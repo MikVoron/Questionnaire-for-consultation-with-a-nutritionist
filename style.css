@@ -6,6 +6,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+
   font-family: 'Lora', 'Nunito', sans-serif;
   color: #1b4332;
   /* background-color:#eaf4ef; */
@@ -38,7 +39,7 @@ button {
 
 .custom-checkbox,
 .custom-radio {
-  margin-bottom: 22px;
+ margin-bottom: 22px;
 }
 
 
@@ -57,7 +58,7 @@ button {
 h1, h2 {
   font-size: 28px;
   text-align: center;
-
+  margin-bottom: 20px;
 }
 
 h1, h2, h3 {
@@ -184,6 +185,7 @@ button[type="submit"]:hover {
 
 form {
   background-color: #ffffff;
+
   padding: 0 30px 30px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
@@ -199,6 +201,7 @@ form {
   border-radius: 16px;
   box-shadow: 0 6px 12px rgba(0,0,0,0.1);
 }
+
 
 input:focus, textarea:focus {
   border-color: #74c69d;
