@@ -448,6 +448,18 @@ transform: translateY(-1px);
   background-size: contain;
 }
 
+.svg-divider-comments::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 38px;
+  height: 38px;
+  transform: translate(-50%, -50%);
+  background: url("community-comments.svg") no-repeat center;
+  background-size: contain;
+}
+
 input:hover,
 textarea:hover {
   border-color: #40916c;
