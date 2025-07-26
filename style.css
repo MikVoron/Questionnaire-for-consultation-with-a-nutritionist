@@ -455,58 +455,59 @@ textarea:hover {
 /* Ползунок */
 
 .slider-wrapper {
-  max-width: 300px;
-  margin: 30px auto;
+  max-width: 420px;
+  margin: 40px auto;
   text-align: center;
   font-family: sans-serif;
 }
 
 .slider-wrapper label {
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .slider-value {
-  margin-top: 8px;
-  font-size: 14px;
+  margin-top: 12px;
+  font-size: 18px;
   color: #333;
+  font-weight: 600;
 }
 
 .slider-hint {
-  margin-top: 4px;
-  font-size: 13px;
+  margin-top: 6px;
+  font-size: 15px;
   color: #666;
 }
 
 input[type="range"][name="stress_level"] {
   -webkit-appearance: none;
   width: 100%;
-  height: 12px;
-  border-radius: 6px;
+  height: 16px;
+  border-radius: 8px;
   background: #ccc;
   outline: none;
   transition: background 0.3s ease;
-  margin-top: 10px;
+  margin-top: 12px;
 }
 
 /* Трек */
 input[type="range"]::-webkit-slider-runnable-track {
-  height: 12px;
-  border-radius: 6px;
+  height: 16px;
+  border-radius: 8px;
 }
 
 /* Ползунок */
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
-  width: 20px;
-  height: 20px;
+  width: 28px;
+  height: 28px;
   background-color: #74c69d;
   border-radius: 50%;
   cursor: pointer;
-  margin-top: -4px;
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+  margin-top: -6px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
 }
 
 input[type="range"]:active::-webkit-slider-thumb {
@@ -515,31 +516,33 @@ input[type="range"]:active::-webkit-slider-thumb {
 
 /* Firefox */
 input[type="range"]::-moz-range-track {
-  height: 12px;
-  border-radius: 6px;
+  height: 16px;
+  border-radius: 8px;
   background: #ccc;
 }
 
 input[type="range"]::-moz-range-thumb {
-  width: 20px;
-  height: 20px;
+  width: 28px;
+  height: 28px;
   background-color: #74c69d;
   border: none;
   border-radius: 50%;
   cursor: pointer;
 }
 
-.slider-value {
-  margin-top: 8px;
-  font-size: 14px;
-  transition: color 0.3s ease;
-  font-weight: 500;
-}
-
 input[type="range"] {
   --range-fill: #74c69d;
   background: linear-gradient(to right, var(--range-fill) 0%, #ccc 0%);
-  height: 8px;
-  border-radius: 5px;
+  border-radius: 8px;
   appearance: none;
 }
+
+.slider-label {
+  font-family: 'Lora', serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #2d6a4f;
+  margin-right: 6px;
+}
+
+
