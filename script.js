@@ -72,3 +72,40 @@ document.addEventListener('DOMContentLoaded', () => {
     energyRange.addEventListener('input', e => updateEnergy(e.target.value));
   }
 });
+
+// Слайдер активности
+
+document.addEventListener('DOMContentLoaded', () => {
+  // === Активность ===
+  const activityRange = document.getElementById('activity_level');
+  const activityDisplay = document.getElementById('activityDisplay');
+
+  const activityStates = {
+    1: { text: '🛌 Малоподвижный — преимущественно сидячий образ жизни', color: '#e76f51' },
+    2: { text: '🚶‍♂️ Умеренная активность — немного движения', color: '#f28482' },
+    3: { text: '🚴 Средняя активность — сбалансированный ритм', color: '#f5c542' },
+    4: { text: '🤸‍♀️ Активный — регулярные занятия спортом', color: '#a8dadc' },
+    5: { text: '🏋️‍♂️ Высокоактивный — интенсивные нагрузки и движение', color: '#74c69d' }
+  };
+
+  const updateActivity = (value) => {
+    const numericValue = parseInt(value);
+    const percent = ((numericValue - parseInt(activityRange.min)) /
+                    (parseInt(activityRange.max) - parseInt(activityRange.min))) * 100;
+
+    const state = activityStates[numericValue];
+    if (state) {
+      activityRange.style.background = `linear-gradient(to right, ${state.color} ${percent}%, #ccc ${percent}%)`;
+      activityDisplay.textContent = state.text;
+      activityDisplay.style.color = state.color;
+      activityDisplay.style.backgroundColor = 'transparent';
+    }
+  };
+
+  if (activityRange && activityDisplay) {
+    updateActivity(activityRange.value);
+    activityRange.addEventListener('input', e => updateActivity(e.target.value));
+  }
+
+  // здесь остаются код для энергии и стресса — ты уже настроил их идеально!
+});

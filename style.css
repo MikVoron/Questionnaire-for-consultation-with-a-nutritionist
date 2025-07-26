@@ -89,6 +89,9 @@ label {
   cursor: pointer;
 }
 
+textarea {
+  margin-top: 12px; /* или 16px/20px — по вкусу */
+}
 
 .label-title, .radio-title {
   display: block;               /* переносит текст на отдельную строку */
@@ -361,7 +364,7 @@ transform: translateY(-1px);
 
 /* SVG-иконка в центре линии */
 
-.svg-divider-name::before {
+.svg-divider-information::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -373,7 +376,31 @@ transform: translateY(-1px);
   background-size: contain;
 }
 
-.svg-divider-email::before {
+.svg-divider-energy::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 36px;
+  height: 36px;
+  transform: translate(-50%, -50%);
+  background: url("cereal.svg") no-repeat center;
+  background-size: contain;
+}
+
+.svg-divider-food::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  transform: translate(-50%, -50%);
+  background: url("salad.svg") no-repeat center;
+  background-size: contain;
+}
+
+.svg-divider-body::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -381,7 +408,43 @@ transform: translateY(-1px);
   width: 32px;
   height: 32px;
   transform: translate(-50%, -50%);
-  background: url("cereal.svg") no-repeat center;
+  background: url("list.svg") no-repeat center;
+  background-size: contain;
+}
+
+.svg-divider-medecine::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 32px;
+  height: 32px;
+  transform: translate(-50%, -50%);
+  background: url("care-doctor.svg") no-repeat center;
+  background-size: contain;
+}
+
+.svg-divider-sleep::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  transform: translate(-50%, -50%);
+  background: url("sleeping.svg") no-repeat center;
+  background-size: contain;
+}
+
+.svg-divider-women::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 43px;
+  height: 43px;
+  transform: translate(-50%, -50%);
+  background: url("gardener-woman.svg") no-repeat center;
   background-size: contain;
 }
 
@@ -564,3 +627,69 @@ input[type="range"][name="energy_level"] {
   --range-fill: #f5c542; /* или #74c69d — можно подбирать динамически */
   background: linear-gradient(to right, var(--range-fill) 0%, #ccc 0%);
 }
+
+/* Слайдер активности */
+.activity-slider {
+  max-width: 420px;
+  margin: 40px auto;
+  text-align: center;
+  font-family: 'Lora', serif;
+}
+
+.activity-slider label {
+  display: block;
+  margin-bottom: 12px;
+  font-weight: bold;
+  font-size: 20px;
+  color: #2d6a4f;
+}
+
+.activity-hint {
+  margin-top: 6px;
+  font-size: 15px;
+  color: #666;
+}
+
+input[type="range"][name="activity_level"] {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 16px;
+  border-radius: 8px;
+  background: #ccc;
+  outline: none;
+  transition: background 0.3s ease;
+  margin-top: 12px;
+}
+
+input[type="range"][name="activity_level"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 28px;
+  height: 28px;
+  background-color: #74c69d;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  margin-top: -6px;
+}
+
+.activity-value {
+  margin-top: 12px;
+  font-size: 18px;
+  color: #333;
+  font-weight: 600;
+}
+
+#activityDisplay {
+  display: inline-block;
+  width: 100%;
+  max-width: 280px;
+  min-height: 26px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #2d6a4f;
+  text-align: center;
+  transition: all 0.3s ease;
+  background-color: transparent;
+  border: none;
+}
+

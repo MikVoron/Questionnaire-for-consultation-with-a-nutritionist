@@ -20,8 +20,8 @@
 		<h1>🥬 Ваш путь к здоровью</h1>
 
 		<p class="instructions">
-			Пожалуйста, заполните анкету.<br>
-			После отправки она будет доставлена мне на электронную почту <br>для анализа и разработки плана питания.
+			Здравствуйте! <br> Меня зовут Юлия Воронова.<br> Я дипломированный доказательный нутрициолог. Спасибо, что обратились за консультацией. Чтобы она прошла максимально эффективно, зпполните, пожалуйста, анкету.<br> После отправки она будет доставлена мне на электронную почту
+			для анализа и разработки плана нашей с вами работы.
 		</p>
 
 		<form action="https://api.web3forms.com/submit" method="POST">
@@ -29,7 +29,7 @@
 			<input type="hidden" name="subject" value="Анкета клиента нутрициолога">
 			<input type="hidden" name="redirect" value="http://127.0.0.1:5500/thankyou.html">
 
-			<hr class="svg-divider svg-divider-name">
+			<hr class="svg-divider svg-divider-information">
 
 			<section>
 				<h3>🙋 1. Давайте познакомимся!</h3>
@@ -98,7 +98,7 @@
 
 			</section>
 
-			<hr class="svg-divider svg-divider-email">
+			<hr class="svg-divider svg-divider-energy">
 
 			<section>
 				<h3>💡 2. Ваша энергия и самочувствие</h3>
@@ -115,12 +115,23 @@
 					</div>
 				</div>
 
+				<div class="activity-slider">
+					<label for="activity_level">🏃‍♂️ Насколько активный у Вас образ жизни?</label>
+					<div class="activity-hint">Двигайте ползунок и выберите Ваш вариант</div>
+
+					<input type="range" name="activity_level" id="activity_level" min="1" max="5" value="3" />
+
+					<div class="activity-value">
+						<span id="activityDisplay">3</span>
+					</div>
+				</div>
+
 				<label>Что Вас беспокоит в Вашем питании и привычках?
 					<textarea name="Питание - беспокойство" rows="3" placeholder="Например: нерегулярное питание, много сладкого, мало овощей..."></textarea>
 				</label>
 			</section>
 
-			<hr class="svg-divider svg-divider-email">
+			<hr class="svg-divider svg-divider-food">
 
 			<section>
 				<h3>🍽️ 3. Ваше питание</h3>
@@ -241,7 +252,7 @@
 
 			</section>
 
-			<hr class="svg-divider svg-divider-sleep">
+			<hr class="svg-divider svg-divider-body">
 
 			<section class="custom-checkbox-group">
 				<h3 class="checkbox-title">🩺 5. Что чувствует ваше тело сейчас?</h3>
@@ -388,7 +399,7 @@
 
 			</section>
 
-			<hr class="svg-divider svg-divider-sleep">
+			<hr class="svg-divider svg-divider-medecine">
 
 			<section class="custom-checkbox-group">
 				<h3 class="checkbox-title">🫀 6. Медицинская информация</h3>
@@ -480,7 +491,7 @@
 				</label>
 			</section>
 
-			<hr class="svg-divider svg-divider-sleep">
+			<hr class="svg-divider svg-divider-women">
 
 			<section class="custom-checkbox-group">
 				<h3 class="checkbox-title">👩‍⚕️ 7. Женское здоровье</h3>
