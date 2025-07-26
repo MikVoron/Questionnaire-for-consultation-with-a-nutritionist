@@ -71,7 +71,7 @@
 
 				<label>
 					<span class="label-title">1.8 Ваш запрос для обращения:</span>
-					<textarea name="client_request" rows="3" placeholder="С какой целью вы обратились? Что вас беспокоит?"></textarea>
+					<textarea name="client_request" rows="3" placeholder="С какой целью Вы обратились? Что вас беспокоит?"></textarea>
 				</label>
 
 				<label class="custom-checkbox-group">
@@ -221,14 +221,16 @@
 					</label>
 				</label>
 
-				<label>
-					<span class="label-title">4.4 Уровень ежедневного стресса в Вашей жизни на данный момент:</span>
-					<div style="display: flex; justify-content: space-between; margin: 0.5em 0;">
-						<span>1 😌 <small>Максимально расслаблен</small></span>
-						<input type="range" name="stress_level" min="1" max="5" style="flex-grow: 1; margin: 0 1em;">
-						<span>5 😣 <small>Постоянный стресс</small></span>
-					</div>
-				</label>
+				<div class="slider-wrapper">
+					<label for="stress_level">Уровень стресса</label>
+					<div class="slider-hint">Выберите значение от 1 до 5</div>
+
+					<input type="range" name="stress_level" id="stress_level" min="1" max="5" value="3" />
+
+					<div class="slider-value">Текущее значение: <span id="valueDisplay">3</span></div>
+
+				</div>
+
 			</section>
 
 			<hr class="svg-divider svg-divider-sleep">
@@ -425,21 +427,22 @@
 
 				<!-- Головные боли -->
 				<label class="custom-radio radio-title">Бывают ли у Вас регулярные головные боли?</label>
+
 				<label class="custom-radio">
 					<input type="radio" name="headache" value="yes">
 					<span class="checkmark"></span>
 					Да
 				</label>
+
+				<!-- Причина — сразу под "Да" -->
+				<label class="custom-textarea">
+					<textarea name="headache-diagnosis" placeholder="Если да, - пожадуйста опишите причину или диагноз"></textarea>
+				</label>
+
 				<label class="custom-radio">
 					<input type="radio" name="headache" value="no">
 					<span class="checkmark"></span>
 					Нет
-				</label>
-
-				<!-- Причина головных болей -->
-				<label class="custom-textarea">
-					<span class="textarea-title">Если да, есть ли диагноз и известная причина?</span>
-					<textarea name="headache-diagnosis" placeholder="Пожалуйста, опишите причину или диагноз, если он Вам известен"></textarea>
 				</label>
 
 				<!-- Иммунитет -->
@@ -490,8 +493,8 @@
 
 				<!-- Беременности / выкидыши / прерывания -->
 				<label class="custom-textarea">
-					<span class="textarea-title">7.2 Были ли у Вас беременности, выкидыши, прерванные беременности? (если да, пожалуйста, укажите подробнее)</span>
-					<textarea name="pregnancy-history" placeholder="Введите количество или краткое пояснение"></textarea>
+					<span class="textarea-title">7.2 Были ли у Вас беременности, выкидыши, прерванные беременности? </span>
+					<textarea name="pregnancy-history" placeholder="Если да, пожалуйста, укажите подробнее"></textarea>
 				</label>
 
 				<!-- Дети -->
@@ -545,7 +548,8 @@
 
 	</div>
 
-	<script src="script.js"></script>
+	<script src="script.js" defer></script>
+
 </body>
 
 </html>

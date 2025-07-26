@@ -452,3 +452,79 @@ textarea:hover {
   margin-bottom: 8px; /* вот он — аккуратный отступ вниз */
 }
 
+/* Ползунок */
+
+.slider-wrapper {
+  max-width: 300px;
+  margin: 30px auto;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.slider-wrapper label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.slider-value {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #333;
+}
+
+.slider-hint {
+  margin-top: 4px;
+  font-size: 13px;
+  color: #666;
+}
+
+input[type="range"][name="stress_level"] {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 12px;
+  border-radius: 6px;
+  background: #ccc;
+  outline: none;
+  transition: background 0.3s ease;
+  margin-top: 10px;
+}
+
+/* Трек */
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 12px;
+  border-radius: 6px;
+}
+
+/* Ползунок */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: #74c69d;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-top: -4px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+}
+
+input[type="range"]:active::-webkit-slider-thumb {
+  background-color: #57b78d;
+}
+
+/* Firefox */
+input[type="range"]::-moz-range-track {
+  height: 12px;
+  border-radius: 6px;
+  background: #ccc;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background-color: #74c69d;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
