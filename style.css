@@ -547,3 +547,20 @@ input[type="range"] {
 
 
 
+/* Стили слайдера энергии */
+
+input[type="range"][name="energy_level"] {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 16px;
+  border-radius: 8px;
+  background: #ccc;
+  outline: none;
+  transition: background 0.3s ease;
+  margin-top: 12px;
+}
+
+input[type="range"][name="energy_level"] {
+  --range-fill: #f5c542; /* или #74c69d — можно подбирать динамически */
+  background: linear-gradient(to right, var(--range-fill) 0%, #ccc 0%);
+}

@@ -1,28 +1,14 @@
-const printButton = document.getElementById("print-button");
-document.addEventListener("DOMContentLoaded", function () {
-
-  if (printButton) {
-    printButton.addEventListener("click", function () {
-      window.print();
-    });
-  }
-});
-
-
-document.addEventListener('DOMContentLoaded', function () {
-  // Кнопка печати (если используешь)
+document.addEventListener('DOMContentLoaded', () => {
+  // Кнопка печати
   const printButton = document.getElementById("print-button");
   if (printButton) {
-    printButton.addEventListener("click", function () {
-      window.print();
-    });
+    printButton.addEventListener("click", () => window.print());
   }
 
-  // Ползунок уровня стресса
-  const range = document.getElementById('stress_level');
-  const valueDisplay = document.getElementById('valueDisplay');
+  // === Стресс ===
+  const stressRange = document.getElementById('stress_level');
+  const stressDisplay = document.getElementById('valueDisplay');
 
-  // Статусы стрессовых состояний
   const stressStates = {
     1: { text: "😌 Минимальный уровень стресса", color: "#74c69d" },
     2: { text: "🙂 Низкий стресс", color: "#a5c974" },
@@ -31,44 +17,58 @@ document.addEventListener('DOMContentLoaded', function () {
     5: { text: "😣 Постоянный ежедневный стресс", color: "#e76f51" }
   };
 
-  function updateRange(value) {
-  const numericValue = parseInt(value);
-  const percent = ((numericValue - range.min) / (range.max - range.min)) * 100;
+  const updateStress = (value) => {
+    const numeric = parseInt(value);
+    const percent = ((numeric - parseInt(stressRange.min)) /
+                    (parseInt(stressRange.max) - parseInt(stressRange.min))) * 100;
 
-  // Обновляем цвет заливки через CSS-переменную
-  const state = stressStates[numericValue];
-  if (state) {
-    range.style.setProperty('--range-fill', state.color);
-    range.style.background = `linear-gradient(to right, ${state.color} ${percent}%, #ccc ${percent}%)`;
-    valueDisplay.textContent = state.text;
-    valueDisplay.style.color = state.color;
+    const state = stressStates[numeric];
+    if (state) {
+      stressRange.style.background = `linear-gradient(to right, ${state.color} ${percent}%, #ccc ${percent}%)`;
+      stressDisplay.textContent = state.text;
+      stressDisplay.style.color = state.color;
+    }
+  };
+
+  if (stressRange && stressDisplay) {
+    updateStress(stressRange.value);
+    stressRange.addEventListener('input', e => updateStress(e.target.value));
   }
-}
 
-  // Инициализация при загрузке
-  updateRange(range.value);
+  // === Энергия ===
+  const energyRange = document.getElementById('energy_level');
+  const energyDisplay = document.getElementById('energyDisplay');
 
-  // Обновление при изменении
-  range.addEventListener('input', function () {
-    updateRange(this.value);
-  });
-});
+  const energyStates = {
+    1: { text: '🙁 Очень низко', color: '#e76f51' },
+    2: { text: '😕 Ниже среднего', color: '#f28482' },
+    3: { text: '😐 Средний', color: '#f5c542' },
+    4: { text: '🙂 Выше среднего', color: '#a8dadc' },
+    5: { text: '😄 Высокий', color: '#74c69d' }
+  };
 
-// Позунок энергии
+ const updateEnergy = (value) => {
+  const numericValue = parseInt(value);
+  const percent = ((numericValue - parseInt(energyRange.min)) /
+                   (parseInt(energyRange.max) - parseInt(energyRange.min))) * 100;
 
-const energySlider = document.getElementById('energy-level');
-const energyDisplay = document.getElementById('energy-display');
+  const state = energyStates[numericValue];
+  if (state) {
+    // Цвет слайдера — градиент
+    energyRange.style.background = `linear-gradient(to right, ${state.color} ${percent}%, #ccc ${percent}%)`;
 
-const colors = ['#e76f51', '#f28482', '#f5c542', '#a8dadc', '#74c69d'];
+    // Только текст и цвет текста
+    energyDisplay.textContent = state.text;
+    energyDisplay.style.color = state.color;
 
-energySlider.addEventListener('input', () => {
-  const val = energySlider.value;
-  energyDisplay.textContent = val;
-  energyDisplay.style.backgroundColor = colors[val - 1];
+    // Без фонов, без анимаций
+    energyDisplay.style.backgroundColor = 'transparent';
+  }
+};
 
-  const percent = ((val - 1) / 4) * 100;
-  energySlider.style.background = `linear-gradient(to right, ${colors[val - 1]} 0%, #ccc ${percent}%)`;
 
-  energyDisplay.style.animation = 'pop 0.3s ease';
-  setTimeout(() => energyDisplay.style.animation = '', 300);
+  if (energyRange && energyDisplay) {
+    updateEnergy(energyRange.value);
+    energyRange.addEventListener('input', e => updateEnergy(e.target.value));
+  }
 });
