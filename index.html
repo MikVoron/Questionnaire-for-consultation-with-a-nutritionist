@@ -103,11 +103,12 @@
 			<section>
 				<h3>💡 2. Ваша энергия и самочувствие</h3>
 
-				<label for="energy-level">Оцените Ваш уровень энергии:</label>
-				<div style="display: flex; justify-content: space-between; margin: 0.5em 0;">
-					<span>1 🙁 <small>Вообще нет энергии</small></span>
-					<input type="range" id="energy-level" name="Энергия" min="1" max="5" style="flex-grow: 1; margin: 0 1em;">
-					<span>5 😄 <small>Максимальная энергия</small></span>
+				<label for="energy-level" class="slider-label">Оцените Ваш уровень энергии:</label>
+				<div class="slider-wrapper">
+					<span class="slider-scale">1 🙁 <small>Нет энергии</small></span>
+					<input type="range" id="energy-level" min="1" max="5" value="3">
+					<span class="slider-scale">5 😄 <small>Максимум</small></span>
+					<span id="energy-display">3</span>
 				</div>
 
 				<label>Что Вас беспокоит в Вашем питании и привычках?

@@ -54,3 +54,21 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+// Позунок энергии
+
+const energySlider = document.getElementById('energy-level');
+const energyDisplay = document.getElementById('energy-display');
+
+const colors = ['#e76f51', '#f28482', '#f5c542', '#a8dadc', '#74c69d'];
+
+energySlider.addEventListener('input', () => {
+  const val = energySlider.value;
+  energyDisplay.textContent = val;
+  energyDisplay.style.backgroundColor = colors[val - 1];
+
+  const percent = ((val - 1) / 4) * 100;
+  energySlider.style.background = `linear-gradient(to right, ${colors[val - 1]} 0%, #ccc ${percent}%)`;
+
+  energyDisplay.style.animation = 'pop 0.3s ease';
+  setTimeout(() => energyDisplay.style.animation = '', 300);
+});
